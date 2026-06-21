@@ -1,7 +1,7 @@
 #!/bin/sh
 
-echo "Waiting for MySQL at $DB_HOST:3306..."
-while ! nc -z "$DB_HOST" 3306; do
+echo "Waiting for MySQL at $HOST:3306..."
+while ! nc -z "$HOST" 3306; do
   sleep 1
 done
 echo "MySQL is up - running migrations"
